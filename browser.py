@@ -6,8 +6,10 @@ r = requests.get(url)
 # This will get the full page
 print(r.text)
 # This will get the status code
-print("Status code:")
-print("\t *", r.status_code)
+#print("Status code:")
+#print("\t *", r.status_code)
+if r.status_code == 200:
+    print('Website is working!')
 # This will just get just the headers
 h = requests.head(url)
 print("Header:")
