@@ -8,8 +8,11 @@ print(r.text)
 # This will get the status code
 #print("Status code:")
 #print("\t *", r.status_code)
+print("Website status: ")
 if r.status_code == 200:
-    print('Website status: OK')
+    print('OK')
+else:
+    print('Not OK')
 # This will just get just the headers
 h = requests.head(url)
 print("Header:")
@@ -20,7 +23,7 @@ for x in h.headers:
 print("**********")
 # This will modify the headers user-agent
 headers = {
-    'User-Agent' : 'Mobile'
+    'User-Agent' : 'Iphone 8'
 }
 # Test it on an external site
 url2 = 'http://httpbin.org/headers'
